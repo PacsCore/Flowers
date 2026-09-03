@@ -246,6 +246,14 @@ body {
       bottom: 0;
     }
 
+    .flower--2 {
+      bottom: 5vh;
+    }
+    
+    .flower--3 {
+      bottom: 5vh;
+    }
+
     .flower--1 .flower__line {
       height: 58vh;
     }
