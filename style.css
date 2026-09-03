@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--dark-color);
   overflow: hidden;
   position: relative;
@@ -229,3 +229,22 @@ body {
   .not-loaded * {
     animation-play-state: paused !important;
   }
+
+  @media (max-width: 600px) {
+    .flowers {
+        transform: scale(1.1);
+    }
+
+    .flower {
+        bottom: 18vh;
+    }
+
+    #date-display, #message-text {
+        top: 6vh;
+    }
+
+    #message-text {
+        top: calc(6vh + 2rem);
+        font-size: 1.2rem;
+    }
+}
