@@ -53,6 +53,7 @@ body {
   .flowers {
     position: relative;
     transform: scale(0.7);
+    transform-origin: bottom center;
     display: flex;
     justify-content: center;
   }
@@ -232,19 +233,30 @@ body {
 
   @media (max-width: 600px) {
     .flowers {
-        transform: scale(1.1);
+      width: 100%;
+      transform: scale(1.65);
+      transform: scale(calc(56dvh / 70vmin));
+      transform-origin: bottom center;
     }
 
     .flower {
-        bottom: 18vh;
+      bottom: env(safe-area-inset-bottom, 0px);
     }
 
-    #date-display, #message-text {
-        top: 6vh;
+    #date-display,
+    #message-text {
+      top: max(1.25rem, calc(env(safe-area-inset-top, 0px) + 0.75rem));
+      width: min(92vw, 22rem);
+      line-height: 1.35;
+      padding: 0 8px;
+    }
+
+    #date-display {
+      font-size: 0.95rem;
     }
 
     #message-text {
-        top: calc(6vh + 2rem);
-        font-size: 1.2rem;
+      top: calc(max(1.25rem, env(safe-area-inset-top, 0px) + 0.75rem) + 1.7rem);
+      font-size: clamp(1.15rem, 5.5vw, 1.4rem);
     }
-}
+  }
