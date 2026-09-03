@@ -242,6 +242,14 @@ body {
       transform: none;
     }
 
+    .flower--2 {
+      transform: rotate(12deg);
+    }
+    
+    .flower--3 {
+      transform: rotate(-10deg);
+    }
+
     .flower {
       bottom: 0;
     }
