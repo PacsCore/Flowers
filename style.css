@@ -233,14 +233,30 @@ body {
 
   @media (max-width: 600px) {
     .flowers {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
-      transform: scale(1.65);
-      transform: scale(calc(56dvh / 70vmin));
-      transform-origin: bottom center;
+      height: 62vh;
+      transform: none;
     }
 
     .flower {
-      bottom: env(safe-area-inset-bottom, 0px);
+      bottom: 0;
+    }
+
+    .flower--1 .flower__line {
+      height: 58vh;
+    }
+
+    .flower--2 .flower__line {
+      height: 50vh;
+    }
+
+    .flower--3 .flower__line,
+    .flower__line {
+      height: 46vh;
     }
 
     #date-display,
